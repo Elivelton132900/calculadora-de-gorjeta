@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Space+Mono&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
@@ -12,18 +15,19 @@
 
 <body>
   <div class="calculadora">
-    <h1>Gorjeta</h1>
+    <h1 class="tituloPrincipal">Gorjeta</h1>
     <div class="container">
-      <div class="conta">
-        <h2>Valor</h2>
-        <div class="valorInput">
-          <img src="images/icon-dollar.svg">
-          <input type="number">
+      <div class="telaEsquerda">
+        <div class="conta">
+          <h2 class="heading-2">Valor</h2>
+          <div class="valorInput">
+            <input type="number" placeholder="0" maxlength="1">
+            <img src="images/icon-dollar.svg">
+          </div>
         </div>
-      </div>
 
         <div class="selecionarPorcentagem">
-          <h2>Selecione a gorjeta %</h2>
+          <h2 class="heading-2">Selecione a gorjeta %</h2>
           <div class="gorjetas">
             <button>5%</button>
             <button>10%</button>
@@ -35,25 +39,34 @@
         </div>
 
         <div class="numeroDePessoas">
-          <h2>Número de Pessoas</h2>
-          <input type="number">
+          <h2 class="heading-2">Número de Pessoas</h2>
+          <div class="numeroDePessoasInput">
+            <input type="number" placeholder="0">
+            <img src="images/icon-person.svg">
+          </div>
         </div>
       </div>
 
-      <div class="telaCalculadora">
+      <div class="telaDireita">
 
-        <div class="totalGorjeta">
-          <h2>Valor da Gorjeta</h2>
-          <span>/ pessoa</span>
-        </div>
+        <div class="telaFuncional">
+          <div class="totalGorjeta">
+            <h2 class="heading-2">Valor da Gorjeta</h2>
+            <h6>/ pessoa</h6>
+          </div>
 
-        <div class="total">
-          <h2>Total</h2>
-          <span>/ pessoa</span>
+          <div class="total">
+            <h2 class="heading-2">Total</h2>
+            <h6>/ pessoa</h6>
+          </div>
+          <div class="botao">
+            <button class="botaoReset">Reset</button>
+          </div>
         </div>
 
       </div>
     </div>
+  </div>
 </body>
 
 </html>
