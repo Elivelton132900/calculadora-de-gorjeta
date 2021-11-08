@@ -21,7 +21,7 @@
         <div class="conta">
           <h2 class="heading-2">Valor</h2>
           <div class="valorInput">
-            <input type="number" placeholder="0">
+            <input type="number" name="valorDaConta" placeholder="0" id="valorDaConta">
             <img src="images/icon-dollar.svg">
           </div>
         </div>
@@ -34,7 +34,7 @@
             <button>15%</button>
             <button>25%</button>
             <button>50%</button>
-            <input type="number" placeholder="Outro">
+            <input type="number" name="outraPorcentagem" placeholder="Outro" id="outraPorcentagem">
             
 
           </div>
@@ -43,7 +43,7 @@
         <div class="numeroDePessoas">
           <h2 class="heading-2">Número de Pessoas</h2>
           <div class="numeroDePessoasInput">
-            <input type="number" placeholder="0">
+            <input type="number" placeholder="0"  name="numeroDePessoas" id="numeroDePessoas">
             <img src="images/icon-person.svg">
           </div>
         </div>
@@ -53,22 +53,27 @@
 
         <div class="telaFuncional">
           <div class="totalGorjeta">
-            <h2 class="heading-2">Valor da Gorjeta</h2>
+            <h2 class="heading-2 valorDaGorjeta" id="valorDividido">Valor da Gorjeta</h2>
+            <h2 class="valores">R$ 0,00</h2>
             <h6>/ pessoa</h6>
           </div>
 
           <div class="total">
-            <h2 class="heading-2">Total</h2>
+            <h2 class="heading-2" id="total">Total</h2>
+            <h2 class="valores">R$ 0,00</h2>
             <h6>/ pessoa</h6>
           </div>
           <div class="botao">
-            <button class="botaoReset">RESET</button>
+            <button class="botaoReset" id="botaoDeReset">RESET</button>
           </div>
         </div>
 
       </div>
     </div>
   </div>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>

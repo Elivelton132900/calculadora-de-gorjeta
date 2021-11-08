@@ -44,7 +44,7 @@ body {
 
 .container {
     background-color: var(--branco);
-    width: 800px;
+    width: 900px;
     height: 500px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,7 +59,7 @@ body {
 
 .telaDireita {
     grid-area: telaDireita;
-    margin: 45px 40px 40px 0px;
+    margin: 45px 40px 40px 40px;
     background-color: var(--Very-dark-cyan);
     color: white;
     border-radius: 30px;
@@ -97,6 +97,7 @@ input[type=number] {
 
 input::placeholder {
     color: var(--Very-dark-cyan);
+    opacity: 0.5;
 }
 
 input:focus {
@@ -167,7 +168,7 @@ input:focus {
 }
 
 .botaoReset {
-    width: 90%;
+    width: 80%;
     height: 50px;
     border: none;
     background-color: rgba(38, 192, 171, 0.2);
@@ -175,6 +176,8 @@ input:focus {
     font-size: 20px;
     text-align: center;
     color: var(--Very-dark-cyan);
+    position: relative;
+    bottom: 30px;
 }
 
 .botaoReset:hover {
@@ -187,4 +190,27 @@ h6 {
     font-weight: 700;
     font-size: 12px;
     color: var(--Dark-grayish-cyan);
+    width: 100%;
 }
+
+.totalGorjeta, .total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.valores {
+    font-size: 40px;
+    word-spacing: -2px;
+    margin-right: 10px;
+    color: var(--Strong-cyan);
+    font-weight: 700;
+}
+
+.total {
+    margin-top: 30px;
+}
+
+/* Mudanças com Javascript */
+
