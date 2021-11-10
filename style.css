@@ -214,3 +214,15 @@ h6 {
 
 /* Mudanças com Javascript */
 
+.wrap {
+    position: relative;
+}
+
+.wrap h3 {
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    font-weight: 100;
+}
