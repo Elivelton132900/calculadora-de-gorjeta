@@ -214,15 +214,32 @@ h6 {
 
 /* Mudanças com Javascript */
 
-.wrap {
+.wrap, .gorjetas, .wrapPessoas {
     position: relative;
 }
 
-.wrap h3 {
+.wrap h3, .gorjetas h3, .wrapPessoas h3 {
     font-size: 13px;
     color: red;
     position: absolute;
     top: 0;
     left: 150px;
-    font-weight: 100;
+    font-weight: 200;
+}
+
+.gorjetas h3 {
+    top: 140px;
+    margin-left: 20px;
+}
+
+.wrap h3 {
+    margin-left: 20px;
+}
+
+.wrapPessoas h3 {
+    margin-left: 20px;
+}
+
+.inputWarning {
+    border: 1px solid red !important;
 }
