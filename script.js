@@ -2,9 +2,25 @@ const valorInput = document.getElementById('valorDaConta')
 const pessoasInput = document.getElementById('numeroDePessoas')
 const outraPorcentagemInput = document.getElementById('outraPorcentagem')
 
+const botao1 = document.querySelector('[botao1]')
+const botao2 = document.querySelector('[botao2]')
+const botao3 = document.querySelector('[botao3]')
+const botao4 = document.querySelector('[botao4]')
+const botao5 = document.querySelector('[botao5]')
+
+const listaBotao = [botao1, botao2, botao3, botao4,
+ botao5]
+
+
+let botaoAtivo = false
+
+
 let warningValor = false
 let warningGorjeta = false
 let warningPessoas = false
+
+let valorDaGorjeta
+let valorDaPessoa
 
 
 valorInput.addEventListener("keypress", function (e) {
@@ -98,5 +114,72 @@ outraPorcentagemInput.addEventListener("keypress", function (e) {
 
     if (outraPorcentagemInput.value.length >= 2) {
         e.preventDefault()
+    }
+})
+
+function checaBotao() {
+    for(let i = 0; i < listaBotao.length; i++) {
+        if (listaBotao[i].hasAttribute('class', 'botaoClicado')) {
+            botaoAtivo = true
+        }
+    }
+}
+
+function removeClasseBotao() {
+    for(let i = 0; i < listaBotao.length; i++) {
+        if (listaBotao[i].hasAttribute('class', 'botaoClicado')) {
+            listaBotao[i].removeAttribute('class', 'botaoClicado')
+            botaoAtivo = false
+        }
+    }
+}
+
+botao1.addEventListener('click', function(e) {
+    checaBotao()
+    if (botaoAtivo == false) {
+        e.target.classList.add('botaoClicado')
+    } else {
+        removeClasseBotao()
+        e.target.classList.add('botaoClicado')
+    }
+})
+
+botao2.addEventListener('click', function(e) {
+    checaBotao()
+    if (botaoAtivo == false) {
+        e.target.classList.add('botaoClicado')
+    } else {
+        removeClasseBotao()
+        e.target.classList.add('botaoClicado')
+    }
+})
+
+botao3.addEventListener('click', function(e) {
+    checaBotao()
+    if (botaoAtivo == false) {
+        e.target.classList.add('botaoClicado')
+    } else {
+        removeClasseBotao()
+        e.target.classList.add('botaoClicado')
+    }
+})
+
+botao4.addEventListener('click', function(e) {
+    checaBotao()
+    if (botaoAtivo == false) {
+        e.target.classList.add('botaoClicado')
+    } else {
+        removeClasseBotao()
+        e.target.classList.add('botaoClicado')
+    }
+})
+
+botao5.addEventListener('click', function(e) {
+    checaBotao()
+    if (botaoAtivo == false) {
+        e.target.classList.add('botaoClicado')
+    } else {
+        removeClasseBotao()
+        e.target.classList.add('botaoClicado')
     }
 })
