@@ -3,6 +3,9 @@ const spanInputPessoas = document.querySelector('.warningSpanPessoas')
 const botoes = document.getElementById('gorjetas')
 const valorInput = document.getElementById('valorDaConta')
 const pessoasInput = document.getElementById('numeroDePessoas')
+let valorDividido = document.getElementById('valorDividido')
+let valorTotal = document.getElementById('valorTotal')
+let porcentagem
 
 
 valorInput.addEventListener('keyup', function () {
@@ -52,6 +55,16 @@ function removeClasseBotao() {
     })
 }
 
+function atualizaGorjeta() {
+    let conta = (valorInput.value * porcentagem / 100) / pessoasInput.value
+    valorDividido.textContent = (`R$ ${conta.toFixed(2).replace('.', ',')}`)
+}
+
+function atualizaValorTotal() {
+    let conta = ((valorInput.value * porcentagem / 100) + parseFloat(valorInput.value)) /5
+    valorTotal.textContent = (`R$ ${conta.toFixed(2).replace('.', ',')}`)
+}
+
 botoes.addEventListener('click', function (e) {
     const inputPessoasChecado = (spanInputPessoas.getAttribute('style') == 'display: none;')
     const inputValorChecado = (spanInputValor.getAttribute('style') == 'display: none;')
@@ -60,6 +73,9 @@ botoes.addEventListener('click', function (e) {
     if(botaoDisparado.tagName == 'BUTTON' && inputValorChecado && inputPessoasChecado) {
         removeClasseBotao()
         botaoDisparado.classList.add('botaoClicado')
+        porcentagem = botaoDisparado.textContent.replace('%', '')
+        atualizaGorjeta()
+        atualizaValorTotal()
         removeWarningPessoas()
         removeWarningValor()
     } else {
