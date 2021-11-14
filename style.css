@@ -117,7 +117,7 @@ input:focus {
     padding: 0px 50px;
     width: 120px;
     height: 50px;
-    margin: 10px 16px 10px 0px ;
+    margin: 10px 16px 10px 0px;
     border-radius: 6px;
     background-color: var(--Very-dark-cyan);
     color: var(--branco);
@@ -129,7 +129,7 @@ input:focus {
 .gorjetas input {
     width: 120px;
     height: 50px;
-    margin: 10px 15px 10px 0px ;
+    margin: 10px 15px 10px 0px;
     border-radius: 6px;
     
 }
@@ -143,6 +143,7 @@ input:focus {
 .numeroDePessoasInput {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 

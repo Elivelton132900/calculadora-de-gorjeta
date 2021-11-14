@@ -1,0 +1,61 @@
+@media only screen and (max-width: 1001px) {
+
+    body {
+        min-width: 0;
+    }
+
+    .container {
+        width: 700px;
+        height: 450px;
+    }
+
+    .gorjetas button {
+        width: 10px;
+        height: 40px;
+        margin: 10px 10px 10px 0px;
+        font-size: 16px;
+        padding: 0px 40px;
+    }
+
+    .gorjetas input {
+        width: 82px;
+        padding: 10px;
+        height: 40px;
+        margin: 10px 10px 10px 0px;
+        font-size: 16px;
+    }
+
+    .gorjetas input::placeholder {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .teleEsquerda {
+        margin-left: 20px;
+    }
+
+    .telaDireita {
+        margin-right: 20px;
+    }
+
+    .valores {
+        font-size: 30px;
+    }
+
+    .heading-2 {
+        margin-top: 20px;
+    }
+
+    .telaDireita {
+        margin-top: 20px;
+    }
+
+    .botaoReset {
+        font-size: 17px;
+    }
+
+    .warningSpan {
+        margin-left: 22px;
+    }
+
+}

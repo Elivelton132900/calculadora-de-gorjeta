@@ -66,18 +66,18 @@ function atualizaValorTotal() {
     valorTotal.textContent = (`R$ ${conta.toFixed(2).replace('.', ',')}`)
 }
 
-botoes.addEventListener('click', function (e) {
-    const inputPessoasChecado = (spanInputPessoas.getAttribute('style') == 'display: none;')
-    const inputValorChecado = (spanInputValor.getAttribute('style') == 'display: none;')
-    botaoDisparado = e.target
-    console.log(botaoDisparado.tagName)
-
 function funcaoMestre() {
     atualizaGorjeta()
     atualizaValorTotal()
     removeWarningPessoas()
     removeWarningValor()
 }
+
+botoes.addEventListener('click', function (e) {
+    const inputPessoasChecado = (spanInputPessoas.getAttribute('style') == 'display: none;')
+    const inputValorChecado = (spanInputValor.getAttribute('style') == 'display: none;')
+    botaoDisparado = e.target
+    console.log(botaoDisparado.tagName)
 
     if ((botaoDisparado.tagName == 'BUTTON' || botaoDisparado.tagName == 'INPUT') && inputValorChecado && inputPessoasChecado) {
         if (botaoDisparado.tagName == 'BUTTON') {
@@ -86,8 +86,9 @@ function funcaoMestre() {
             porcentagem = botaoDisparado.textContent.replace('%', '')
             funcaoMestre()
         }  else if (botaoDisparado.tagName == 'INPUT') {
-            this.addEventListener("keyup", () => {     
+            addEventListener("keyup", () => {     
                 if(outraPorcentagem.value == '') {
+                    removeClasseBotao()
                     valorDividido.textContent = 'R$ 0,00'
                     valorTotal.textContent = 'R$ 0,00'
                 } else {
@@ -113,4 +114,12 @@ botaoReset.addEventListener('click', () => {
     pessoasInput.value = ''
     valorInput.value = ''
     outraPorcentagem.value = ''
+})
+
+outraPorcentagem.addEventListener('click', (e) => {
+    if (outraPorcentagem.value != '') {
+        removeClasseBotao()
+        porcentagem = parseFloat(outraPorcentagem.value)
+        funcaoMestre()
+    }
 })
