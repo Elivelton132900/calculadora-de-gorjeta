@@ -46,7 +46,7 @@ function removeWarningValor() {
 
 function removeClasseBotao() {
     let filhos = botoes.childNodes
-    filhos.forEach(function(item, indice) {
+    filhos.forEach(function (item, indice) {
         if (indice % 2 != 0) {
             if (item.hasAttribute('class', 'botaoClicado')) {
                 item.removeAttribute('class', 'botaoClicado')
@@ -61,7 +61,7 @@ function atualizaGorjeta() {
 }
 
 function atualizaValorTotal() {
-    let conta = ((valorInput.value * porcentagem / 100) + parseFloat(valorInput.value)) /5
+    let conta = ((valorInput.value * porcentagem / 100) + parseFloat(valorInput.value)) / 5
     valorTotal.textContent = (`R$ ${conta.toFixed(2).replace('.', ',')}`)
 }
 
@@ -69,16 +69,34 @@ botoes.addEventListener('click', function (e) {
     const inputPessoasChecado = (spanInputPessoas.getAttribute('style') == 'display: none;')
     const inputValorChecado = (spanInputValor.getAttribute('style') == 'display: none;')
     botaoDisparado = e.target
+    console.log(botaoDisparado.tagName)
 
-    if(botaoDisparado.tagName == 'BUTTON' && inputValorChecado && inputPessoasChecado) {
-        removeClasseBotao()
-        botaoDisparado.classList.add('botaoClicado')
-        porcentagem = botaoDisparado.textContent.replace('%', '')
-        atualizaGorjeta()
-        atualizaValorTotal()
-        removeWarningPessoas()
-        removeWarningValor()
-    } else {
+function funcaoMestre() {
+    atualizaGorjeta()
+    atualizaValorTotal()
+    removeWarningPessoas()
+    removeWarningValor()
+}
+
+    if ((botaoDisparado.tagName == 'BUTTON' || botaoDisparado.tagName == 'INPUT') && inputValorChecado && inputPessoasChecado) {
+        if (botaoDisparado.tagName == 'BUTTON') {
+            removeClasseBotao()
+            botaoDisparado.classList.add('botaoClicado')
+            porcentagem = botaoDisparado.textContent.replace('%', '')
+            funcaoMestre()
+        }  else if (botaoDisparado.tagName == 'INPUT') {
+            this.addEventListener("keyup", () => {     
+                if(outraPorcentagem.value == '') {
+                    valorDividido.textContent = 'R$ 0,00'
+                    valorTotal.textContent = 'R$ 0,00'
+                } else {
+                    removeClasseBotao()
+                    porcentagem = parseFloat(botaoDisparado.value)
+                    funcaoMestre()
+                }
+            })
+        }
+    } else if (!inputValorChecado || !inputPessoasChecado){
         if ((parseInt(valorInput.value) == 0 || valorInput.value == '')) {
             adicionaWarningValor()
         } else if (parseInt(pessoasInput.value) == 0 || pessoasInput.value == '') {
