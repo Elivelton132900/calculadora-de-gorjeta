@@ -6,6 +6,7 @@ const pessoasInput = document.getElementById('numeroDePessoas')
 let valorDividido = document.getElementById('valorDividido')
 let valorTotal = document.getElementById('valorTotal')
 let porcentagem
+let botaoReset = document.getElementById('botaoDeReset')
 
 
 valorInput.addEventListener('keyup', function () {
@@ -103,4 +104,13 @@ function funcaoMestre() {
             adicionaWarningPessoas()
         }
     }
+})
+
+botaoReset.addEventListener('click', () => {
+    valorDividido.textContent = 'R$ 0,00'
+    valorTotal.textContent = 'R$ 0,00'
+    removeClasseBotao()
+    pessoasInput.value = ''
+    valorInput.value = ''
+    outraPorcentagem.value = ''
 })
