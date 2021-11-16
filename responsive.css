@@ -4,6 +4,10 @@
         min-width: 0;
     }
 
+    .calculadora h1 {
+        bottom: 10px;
+    }
+
     .container {
         width: 700px;
         height: 450px;
@@ -30,14 +34,6 @@
         text-align: center;
     }
 
-    .teleEsquerda {
-        margin-left: 20px;
-    }
-
-    .telaDireita {
-        margin-right: 20px;
-    }
-
     .valores {
         font-size: 30px;
     }
@@ -58,4 +54,149 @@
         margin-left: 22px;
     }
 
+    .valorDaGorjeta, .valorTotal {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 418px) and (max-width: 705px) {
+
+    body {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        border-radius: 0px;
+    }
+
+    .gorjetas {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .gorjetas button {
+        width: 30%;
+    }
+
+    .gorjetas input {
+        width: 30%;
+    }
+
+    .telaEsquerda {
+        border-radius: 0px;
+        margin-left: 10px;
+    }
+
+    .telaDireita{
+        position: absolute;
+        top: 430px;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .telaFuncional {
+        margin-left: 10px;
+    }
+
+    .botao {
+        margin-top: 0;
+    }
+
+    .botaoReset {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .valores {
+        font-size: 30px;
+    }
+
+    .valorDaGorjeta, .valorTotal {
+        font-size: 15px;
+    }
+
+    .warningSpan {
+        margin-left: 30px;
+    }
+
+    .warningSpanPessoas {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 417px){ 
+
+    body {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        border-radius: 0px;
+    }
+
+    .gorjetas {
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .gorjetas button, .gorjetas input {
+        width: 30.3%;
+    }
+
+    .gorjetas input::placeholder {
+        font-size: 13px;
+    }
+
+    .telaEsquerda {
+        border-radius: 0px;
+        margin-left: 10px;
+    }
+
+    .telaDireita{
+        position: absolute;
+        top: 430px;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .telaFuncional {
+        margin-left: 10px;
+    }
+
+    .botao {
+        margin-top: 0;
+    }
+
+    .botaoReset {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .valores {
+        font-size: 30px;
+    }
+
+    .valorDaGorjeta, .valorTotal {
+        font-size: 15px;
+    }
+
+    .warningSpan {
+        margin-left: 30px;
+    }
+
+    .warningSpanPessoas {
+        margin: 0 auto;
+    }
 }
