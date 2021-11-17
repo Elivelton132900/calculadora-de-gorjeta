@@ -7,12 +7,6 @@
 </h2>
 
 <br><br>
-<h2>Tabela de conteúdos</h2>
-<ul>
-
-</ul>
-
-<br><br>
 <h2>Sobre o desafio</h2>
 
 Os usuários devem ser capazes de:
@@ -22,7 +16,7 @@ Os usuários devem ser capazes de:
 - Calcular a gorjeta correta e o custo total da conta por pessoa
 
 <h2>Link para utilização</h2>
-<a href="" target="_blank" >Clique aqui</a>
+<a href="https://calculadordegorjeta.netlify.app/" target="_blank" >Clique aqui</a>
 <br><br>
 <h2>Construído com</h2>
 
